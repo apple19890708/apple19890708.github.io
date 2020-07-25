@@ -1,0 +1,1183 @@
+ *{
+    /* border: 1px solid #000;  */
+}
+html,body{
+    width: 100%;
+    height: 100%;
+    /* display: flex;
+    flex-direction: column; */
+    /* justify-content: center;
+    align-items: center; */
+    padding: 0;
+    margin: 0;
+    max-width: 1920px;
+    font-family: 'Noto Sans TC', sans-serif;
+}
+img{
+    /* 重要!! 響應式縮小圖片 */
+   /* max-width: 100%;
+  height: auto; */
+}
+.test10{
+  height: 119px;
+}
+.hhidden{
+  overflow-y: hidden;
+  }
+nav{
+    width: 100%;
+    /* height: 100px; */
+    /* background-color:green; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    opacity: 1;
+    transition: all ease 1s;
+    background-color: rgb(255, 255, 255);
+    z-index: 30;
+    flex-direction: column;
+    /* max-height: 110px; */
+}
+.search_box{
+  display: none;
+}
+.top_group{
+  width: 100%;
+  /* height: 100px; */
+  /* background-color:green; */
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  position: relative;
+  opacity: 1;
+  transition: all ease 1s;
+  background-color: rgb(255, 255, 255);
+  z-index: 30;
+}
+nav.fixed{
+  position: fixed;   
+  top: 0;
+  z-index: 30;
+  opacity: 1;
+  transition: all ease .1s;
+}
+
+.logo{
+  width: 35%;
+}
+.logo img{
+  width: 100%;
+  max-width: 100%;
+  height: auto;
+ 
+}
+
+.navgroup a{
+  text-decoration: none;
+  width: 90%;
+  /* height: 100%; */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: #000;
+  position: relative;
+  padding: 0 5px;
+}
+
+a>.span0{
+  position: absolute;
+  width: 90%;
+  background-color: rgb(236, 241, 154);
+  height: 80px;
+  bottom: 10px;
+  transition: 1s;
+  z-index: -1;
+}
+a:hover .span0{
+  height: 80px;
+}
+
+a>.span1{
+  position: absolute;
+  width: 90%;
+  background-color: rgb(154, 241, 158);
+  height: 5px;
+  bottom: 10px;
+  transition: 1s;
+  z-index: -1;
+}
+a:hover .span1{
+  height: 80px;
+}
+
+a>.span2{
+  position: absolute;
+  width: 90%;
+  background-color: rgb(250, 196, 79);
+  height: 5px;
+  bottom: 10px;
+  transition: 1s;
+  z-index: -1;
+}
+a:hover .span2{
+  height: 80px;
+}
+
+a>.span3{
+  position: absolute;
+  width: 90%;
+  background-color: rgb(228, 68, 68);
+  height: 5px;
+  bottom: 10px;
+  transition: 1s;
+  z-index: -1;
+}
+a:hover .span3{
+  height: 80px;
+}
+ 
+
+.navgroup{
+    width: 100%;
+    height: 100px;    
+    display: flex;
+    margin-right: 40px;
+     font-size: 1.7rem;
+    /* background-color: red; */
+    
+}
+
+
+
+.searchgroup{
+    width: 35%;
+    height: 100px;
+    display: flex;
+    font-size: 1.5rem;
+     justify-content: center;
+     align-items: center;
+     margin-top: 1%;
+}
+
+.searchgroup a{
+    text-decoration: none;
+    width: 100%;
+    /* height: 100%; */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: #000;
+    position: relative;
+    padding: 0 5px;
+}
+
+.search{
+  width: 70px;
+  height: 40px;
+  background-image: url(./img/research.png);
+  background-size: 28px 28px;
+  background-position: 1%;
+  background-repeat:no-repeat;
+  transition: width 2s;
+  padding-left:30px;
+  /* margin-top: 40px; */
+}
+.searchgroup a.search_xs{
+  display: none;
+}
+.searchgroup input:focus{
+outline:none;
+width: 100px;
+}
+.search_box{
+  width: 100%;
+  background-color: rgb(145, 215, 255);
+  justify-content: center;
+  align-items: center;
+  display: none;
+   transform: translateY(-150%);
+   transition: ease-in 0.5s;
+   padding: 20px;
+   box-sizing: border-box;
+}
+.show{
+  transform: translateY(0%);
+  /* display: flex; */
+}
+.search_1{
+  /* margin-top: 50px; */
+  width: 50%;
+  max-width: 450px;
+  height: 20px;
+  background-image: url(./img/research.png);
+  background-size:18px 18px;
+  background-position: 1% ;
+  background-repeat:no-repeat;
+  transition: width 2s;
+  padding-left:30px;
+  transform: scale(1.5);
+  border-radius: 9px;
+  }
+header input:focus{
+outline:none;
+
+
+}
+.search2{
+  cursor: pointer;
+  display: none;
+}
+
+.btn_switch{
+  display: none;
+}
+
+/* 1024版 的 nav */
+@media (min-width: 768px) and (max-width: 1024px){
+  *{
+    /* border: 1px solid #000; */
+  }
+   nav{
+    justify-content: space-between;
+      max-height: 110px;
+  
+  }
+  .btn_switch{
+  display: flex;
+  width: 200px;
+  position: relative;
+  z-index: 31;
+  justify-content: center;
+  cursor: pointer;
+  /* align-items: flex-start; */
+  height: 20px;
+  padding-top: 20px;
+  
+  
+}
+.btn_switch .bgl{
+  position: relative;
+  flex: none;
+  width: 20%;
+  height: 3px;
+  background: rgb(255, 93, 93);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.4s ease;
+}
+.btn_switch .bgl.bottom{
+  position: absolute;
+  z-index: 1;
+  top: 30px;
+  height: 3px;
+  background: inherit;
+  background: rgb(255, 93, 93);
+}
+.btn_switch .bgl.top{
+  position: absolute;
+  top: 10px;
+  /* background: blue; */
+  height: 3px;
+  z-index: 1;
+}
+
+  
+  .translateY{
+     top:0px;
+    transform: rotate(135deg);
+
+  }
+
+.turnX{
+  margin-top: 10px;
+  transform: rotate(45deg);
+  }
+
+.turnN{
+  opacity: 0;
+}
+
+
+
+
+
+  .navgroup{
+    background-color: rgba(0, 0, 0, 0.9);
+    width: 200px;
+    height: 700px;
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    left: -200px;
+    top: 0px;
+    z-index: 30;
+    overflow: hidden;
+        /* transition: 0.5s; */
+    
+  }
+  .navgroup a:first-child{
+      color: #000;
+  }
+
+  .navgroup a:hover{
+    color: #000;
+  }
+  a>.span0{
+    height: 50px;
+  }
+  .navgroup a{
+    margin-top: 100px;
+  }
+  .navgroup a:hover{
+    color: #000;
+  }
+  a:hover .span0{
+    height: 50px;
+  }
+  a:hover .span1{
+    height: 50px;
+  }
+  a:hover .span2{
+    height: 50px;
+  }
+  a:hover .span3{
+    height: 50px;
+  }
+
+  @keyframes openS{
+    0%{
+      left: -200;
+    }
+    100%{
+      left: 0;
+    }
+  }
+
+   @keyframes test1{
+        0%{
+      margin-left: -200px;
+      
+    }
+    100%{
+
+      
+    }
+   }
+
+  .open{
+    animation: openS ease-in 0.5s;
+    animation-fill-mode: both;
+   
+  }
+  .test{
+    animation: test1 ease 1s 0.2s;
+    animation-fill-mode: both;
+  }
+
+  .navgroup a > span{
+    bottom: -5px ;
+  }
+  .navgroup a{
+    color: #fff;
+    transition: 0.5s;
+  }
+
+
+
+.overlay{
+
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    z-index: 29;
+    background: rgba(0, 0, 0, 0.5);
+    opacity: 0;
+clip-path: circle(0.1% at 50% 50%);
+    transition: 0.4s ease-in;
+}
+.overlay.visible {
+    opacity: 1;
+    display: block;
+    
+    clip-path: circle(70.7% at 50% 50%);
+  
+}
+
+
+
+.searchgroup{
+  width: 20%;
+}
+
+  .search{
+   display: none;
+  }
+  .search2{
+  text-decoration: none;
+  width: 100%;
+  /* height: 100%; */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: #000;
+  position: relative;
+  padding: 0 5px;
+}  
+  .logo{
+  width: 40%;
+}
+  .navgroup{
+    margin-right: 40px;
+     font-size: 1.5rem;
+    /* background-color: red; */
+    
+}
+.search_box{
+  width: 100%;
+  display: flex;
+}
+}
+/* 1024版 的 nav */
+/* 768版 的 nav */
+
+@media (max-width: 768px){
+  *{
+    /* border: 1px solid #000; */
+ 
+  }
+  nav{
+    justify-content: space-between;
+    /* margin-left: -5%; */
+    max-height: 110px;
+    /* overflow: hidden; */
+  }
+  .btn_switch{
+  display: flex;
+  /* width: 150px; */
+  position: relative;
+  z-index: 31;
+  justify-content: center;
+  cursor: pointer;
+  /* align-items: flex-start; */
+  height: 20px;
+  padding-top: 20px;
+  
+  
+}
+.btn_switch .bgl{
+  position: relative;
+  flex: none;
+  width: 30px;
+  height: 3px;
+  background: rgb(255, 93, 93);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.4s ease;
+}
+.btn_switch .bgl.bottom{
+  position: absolute;
+  z-index: 1;
+  top: 30px;
+  height: 3px;
+  background: inherit;
+  background: rgb(255, 93, 93);
+}
+.btn_switch .bgl.top{
+  position: absolute;
+  top: 10px;
+  /* background: blue; */
+  height: 3px;
+  z-index: 1;
+}
+
+  
+.translateY{
+    top:0px;
+    transform: rotate(135deg);
+
+  }
+
+.turnX{
+  margin-top: 10px;
+  transform: rotate(45deg);
+  }
+
+.turnN{
+  opacity: 0;
+}
+
+.search_box{
+  display: flex;
+}
+
+
+
+
+  .navgroup{
+    background-color: rgba(0, 0, 0, 0.8);
+    width: 200px;
+    height: 700px;
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    left: -200px;
+    top: 0px;
+    z-index: 30;
+    overflow: hidden;
+        /* transition: 0.5s; */
+    
+  }
+  .navgroup a:first-child {
+    color: #000;
+}
+
+  .navgroup a:hover{
+    color: #000;
+  }
+  a>.span0{
+    height: 50px;
+  }
+  .navgroup a{
+    margin-top: 100px;
+  }
+  .navgroup a:hover{
+    color: #000;
+  }
+  a:hover .span0{
+    height: 50px;
+  }
+  a:hover .span1{
+    height: 50px;
+  }
+  a:hover .span2{
+    height: 50px;
+  }
+  a:hover .span3{
+    height: 50px;
+  }
+
+  @keyframes openS{
+    0%{
+      left: -200;
+    }
+    100%{
+      left: 0;
+    }
+  }
+
+   @keyframes test1{
+        0%{
+      margin-left: -200px;
+      
+    }
+    100%{
+
+      
+    }
+   }
+
+  .open{
+    animation: openS ease-in 0.5s;
+    animation-fill-mode: both;
+   
+  }
+  .test{
+    animation: test1 ease 1s 0.2s;
+    animation-fill-mode: both;
+  }
+
+  .navgroup a > span{
+    bottom: -5px ;
+  }
+  .navgroup a{
+    color: #fff;
+    transition: 0.5s;
+  }
+
+
+
+.overlay{
+
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    z-index: 29;
+    background: rgba(0, 0, 0, 0.5);
+    opacity: 0;
+clip-path: circle(0.1% at 50% 50%);
+    transition: 0.4s ease-in;
+}
+.overlay.visible {
+    opacity: 1;
+    display: block;
+    
+    clip-path: circle(70.7% at 50% 50%);
+  
+}
+
+
+
+.searchgroup{
+  width: 20%;
+}
+
+  .search{
+    display: none;
+  }
+    .search2{
+    text-decoration: none;
+    width: 100%;
+    /* height: 100%; */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: #000;
+    position: relative;
+    padding: 0 5px;
+  }
+
+  .logo{
+  width: 45%;
+  margin-left: 10%;
+}
+  .navgroup{
+    margin-right: 40px;
+     font-size: 1.5rem;
+    /* background-color: red; */
+    
+}
+.search2 >img{
+  width: 25px;
+  height: 25px;
+}
+.searchgroup a>img{
+  width: 25px;
+  height: 25px;
+}
+}
+/* 768版 的 nav */
+
+    /* 這邊是header區 */
+
+
+*{
+  /* border: 1px solid #000; */
+}
+
+header{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 600px;
+    background-color: #EEE9DE;
+    position: relative;
+
+}
+
+
+
+.button_group{
+  /* border: 1px solid #000; */
+  width: 820px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  top: 100px;
+  /* margin-top: 20px; */
+  position: absolute;
+  /* flex-direction: row; */
+ 
+}
+
+.button_group a{
+  width: 120px;
+  text-decoration: none;
+  font-size: 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border: 2px solid rgb(43, 43, 44,.5);
+  border-radius: 10px;
+  padding: 10px;
+  /* margin-left: 10px; */
+  /* position: relative; */
+  color:#000;
+  
+}
+.button_group img{
+  /* position: absolute; */
+  /* margin-bottom: -5px; */
+}
+
+.hint{
+  width: 90%;
+  margin-top: 200px;
+  /* position: absolute; */
+  font-size: 3rem;
+  /* bottom: 50px; */
+  text-align: center;
+
+
+}
+  .selection_group{
+    margin-top: 100px;
+      width: 100%;
+      display: flex;
+      /* justify-content: center; */
+      /* align-items: center; */
+      flex-direction: column;
+      margin-bottom: 15px;
+
+    }
+    .selection_group .selection{
+      width: 80%; 
+      display: flex;
+      justify-content:center;
+      align-items: center;  
+    }
+    .selection_group .selection.s1{
+      width: 100%;
+      display: flex;
+      
+    }
+    .selection_group .selection.s2{
+      width: 100%;
+      margin-top: 15px;
+      display: flex;
+      
+    }
+    .selection_group .selection .lselect{
+      border-radius: 5px;
+      padding: 5px;
+      margin-right: 0px;
+      font-size: 2rem;
+    }
+    .selection_group .rselect_group{
+      margin-left: 20px;
+      font-size: 1.5rem;
+    }
+    .selection_group .rselect_group .th{
+      border: 1px solid #000;
+      display: inline-block;
+      width: 140px;
+      text-align: center;
+      text-decoration: none;
+      border-radius: 5px;
+      padding: 10px 0;
+      cursor: pointer;
+    }
+    .selection_group .rselect_group .td{
+      border: 1px solid #000;
+      display: inline-block;
+      width: 140px;
+      text-align: center;
+      text-decoration: none;
+      border-radius: 5px;
+      padding: 10px 0;
+      cursor: pointer;
+    }
+
+
+    /* 這邊是header區 */
+
+      /* 這邊是header 1024區 */
+    @media (min-width: 768px) and (max-width: 1024px){
+      header{
+        height: 400px;
+      }
+      .button_group{
+        width: 95%; 
+      }
+      .hint{
+        font-size: 2rem;
+      }
+      .selection_group .selection .lselect{
+        font-size: 1.2rem;
+      }
+      .selection_group .rselect_group{
+        font-size: 1rem;
+        /* width: 140px; */
+      }
+      .selection_group .rselect_group .th{
+        width: 100px;
+        margin-top: 5px;
+      }
+      .selection_group .rselect_group .td{
+        width: 100px;
+        margin-top: 5px;
+      }
+    }
+     /* 這邊是header 1024區 */
+
+/* 這邊是header 768區 */
+    @media (max-width: 768px){
+      header{
+        height: 400px;
+      }
+      .button_group{
+        width: 90%;
+       /* margin-left: -9%; */
+      }
+      .button_group img{
+        transform: scale(0.8);
+      }
+      .button_group a{
+        width: 80px;
+        font-size: 1.1rem;
+        flex-direction: column;
+        margin-left: 5px;
+         /* height: 50%; */
+      } 
+      .hint{
+        font-size: 1.5rem;
+      }
+      .selection_group .selection .lselect{
+        font-size: 1.2rem;
+      }
+      .selection_group .rselect_group{
+        width: 90%;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-evenly;
+        font-size: 1rem;
+        
+      }
+      .selection_group .rselect_group .th{
+        width: 100px;
+        margin: 5px;
+      }
+      .selection_group .rselect_group .td{
+        width: 100px;
+         margin: 5px;
+      }
+    }
+     /* 這邊是header 768區 */
+
+
+     /* 這邊是main區 */
+
+    main{
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+    }
+
+  
+
+    .big_map{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 100%;
+    max-width: 1200px;
+    height: 843px;
+    background-size: cover;
+    background-position: center ;
+    background-image: url(./img/world-map.png);
+    position: relative;
+    /* border: 1px solid #000; */
+    }
+
+    .testgroup{
+     width: 100%;
+      height: 100%;
+      position: relative;
+    }
+
+
+    .focuse_button{
+      background-color: black;
+      color: blanchedalmond;
+    }
+
+      /* 這是戰爭類大群 */
+    .war_icon_group{
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      /* display: none; */
+      /* border: 1px solid #000; */
+    }  
+    .war_icon{
+      width: 100%;
+      height: 100%;
+      position: relative;
+    }
+
+     /* 這是史前時代的戰爭群  */
+    .war_icon.BC{
+      /* display: none; */
+    }
+    .war_icon .Sicon{
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      position: absolute;
+      color: black;
+      font-weight: 900;
+      cursor: pointer;
+     
+    }
+    .Sicon.a1{
+      top: 50%;
+      left: 70%;
+    }
+    .Sicon.a2{
+      top: 50%;
+      left: 47%;
+    }
+    .Sicon.a3{
+      top: 54%;
+      left: 53%;
+    }
+    .Sicon.a4{
+      top: 42%;
+      left:50%;
+    }
+    .Sicon.a5{
+      top: 60%;
+      left: 80%;
+    }
+
+    /* 這是1-10世紀戰爭群 */
+    .war_icon.A1{
+      /* display: none; */
+    }
+    .Sicon.b1{
+      top: 70%;
+      left: 80%;
+    }
+    .Sicon.b2{
+      top: 38%;
+      left: 45%;
+    }
+    .Sicon.b3{
+      top: 47%;
+      left: 83%;
+    }
+    .Sicon.b4{
+      top: 46%;
+      left: 50%;
+    }
+    .Sicon.b5{
+      top: 50%;
+      left: 72%;
+    }
+
+
+
+      /* 這是藝術類大群 */
+    .art_icon_group{
+      width: 100%;
+      height: 100%;
+      /* border: 1px solid #000; */
+    } 
+
+    .art_icon{
+      width: 100%;
+      height: 100%;
+      position: relative;
+    }
+
+     /* 這是史前時代的藝術群  */
+    .art_icon.BC{
+      /* display: none; */
+    }
+    .art_icon .Sicon{
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      position: absolute;
+      color: black;
+      font-weight: 900;
+      cursor: pointer;
+
+    }
+
+     .Sicon.f1{
+      top: 50%;
+      left: 72%;
+    }
+    .Sicon.f2{
+     top: 46%;
+      left: 50%;
+    }
+    .Sicon.f3{
+    top: 47%;
+      left: 83%;
+    }
+    .Sicon.f4{
+       top: 38%;
+      left: 45%;
+    }
+    .Sicon.f5{
+     top: 70%;
+      left: 80%;
+    }
+
+     /* 這是1-10世紀藝術群  */
+
+       .art_icon.A1{
+      /* display: none; */
+    }
+  
+     .Sicon.g1{
+       top: 60%;
+      left: 80%;
+    }
+    .Sicon.g2{
+    top: 42%;
+      left:50%;
+    }
+    .Sicon.g3{
+        top: 47%;
+      left: 83%;
+    }
+    .Sicon.g4{
+        top: 50%;
+      left: 57%;
+    }
+    .Sicon.g5{
+        top: 50%;
+      left: 70%;
+    }
+
+
+    /* 這是文化類大群 */
+    .calture_icon_group{
+      width: 100%;
+      height: 100%;
+      /* border: 1px solid #000; */
+    } 
+
+    .calture_icon{
+      width: 100%;
+      height: 100%;
+      position: relative;
+    }
+
+     /* 這是史前時代的文化群  */
+    .calture_icon .Sicon{
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      position: absolute;
+      color: black;
+      font-weight: 900;
+      cursor: pointer;
+
+    }
+
+
+
+
+
+
+
+
+      /* 這邊是main區 */
+
+            /* 這邊是main 1024區 */
+    @media (min-width: 768px) and (max-width: 1024px){
+      .big_map{
+      width: 100%;
+      }
+      .Sicon{
+        transform: scale(0.8);
+      }
+
+
+
+    }
+     /* 這邊是main 1024區 */
+
+
+    /* 這邊是main 768區 */
+    @media (max-width: 768px){
+      .big_map{
+      width: 100%;
+      height: 400px;
+      }
+      .Sicon{
+        transform: scale(0.5);
+      }
+      .selection_group .selection.s1{
+        flex-direction: column;
+      }
+      .selection_group .selection.s2{
+        flex-direction: column;
+      }
+      .Sicon.f3{
+        top: 37%;
+        left: 73%;
+      }
+      .Sicon.a3{
+        top: 37%;
+        left: 73%;
+      }
+      .Sicon.b3{
+        top: 37%;
+        left: 73%;
+      }
+      .Sicon.g3{
+        top: 37%;
+        left: 73%;
+      }
+    }
+     /* 這邊是main 768區 */
+
+
+
+  footer{
+  background-color:black;
+  color: rgb(255, 255, 255);
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+}
+footer .content_me{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  /* margin-left: 10.3%; */
+}
+footer .content_me .content_title{
+font-size: 1.3rem;
+display: flex;
+justify-content: center;
+}
+.Tel{
+  display: flex;
+  justify-content: center;
+}
+address{
+   margin-top: 10px;
+   display: flex;
+  justify-content: center;
+}
+footer .copy_right{
+  margin: 10px;
+  display: flex;
+  justify-content: center;
+}
+
+
