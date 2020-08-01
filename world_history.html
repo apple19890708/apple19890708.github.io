@@ -96,7 +96,7 @@
           <div class="td" id="a1">1-10世紀</div>
           <div class="td" id="a11">11-15世紀</div>
           <div class="td" id="a16">16-19世紀</div>
-          <div class="td" id="a20">20世紀-Now</div>
+          <div class="td" id="a20">20世紀後</div>
 
         </div>
       </div>
@@ -340,7 +340,6 @@
 
 </body>
 <script>
-
   //平板與手機模式閜顯示搜尋
   var search2 = $('.search2');
   search2.on('click', function () {
@@ -359,19 +358,22 @@
     }
     if ($(".fixed")) {
       if ($(window).scrollTop() > zero) {
-        $(".fixed").stop(true).animate({ opacity: 0 });
+        $(".fixed").stop(true).animate({
+          opacity: 0
+        });
         $(".fixed").css("display", "none");
 
       } else {
         $(".fixed").css("display", "flex");
-        $(".fixed").stop(true).animate({ opacity: 1 });
+        $(".fixed").stop(true).animate({
+          opacity: 1
+        });
 
 
       }
       zero = $(window).scrollTop()
     }
-  }
-  )
+  })
 
   // 漢堡紐
   var btn_switch = $('.btn_switch'),
@@ -642,11 +644,6 @@
   // 這塊是下方小按鈕的點擊和左右邊的點擊觸發效果
 
   // 這裡是熱門文章區
-
-
-
-
-
 </script>
 
 </html>

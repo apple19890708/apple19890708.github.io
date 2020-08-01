@@ -921,9 +921,9 @@ main {
 }
 
 .Month_theme .left_showbox img {
-
-  /* max-width: 100%; */
-  /* height: auto; */
+  max-width: 68%;
+  height: auto;
+  margin-left: 37%;
 }
 
 .Month_theme .right_showtext {
@@ -1026,16 +1026,38 @@ main {
   text-align: center;
 }
 
+.Month_theme .show_group.group4 .left_showbox img {
+  max-width: 100%;
+  height: auto;
+  margin-left: 20%;
+  transform: scale(1.4);
+  margin-top: 10%;
+}
+
 /* 這邊是Month_theme區 */
 
 
 
 /* 1024版 的Month_theme*/
 @media (min-width: 768px) and (max-width: 1024px) {
+
   .Month_theme .left_showbox {
     width: 90%;
   }
 
+  .Month_theme .left_showbox img {
+    max-width: 100%;
+    height: auto;
+    margin-left: 20%;
+  }
+
+  .Month_theme .show_group.group4 .left_showbox img {
+    max-width: 100%;
+    height: auto;
+    margin-left: 20%;
+    transform: scale(1.4);
+    margin-top: 10%;
+  }
 
   .Month_theme .right_showtext .article_title {
     font-size: 2.3rem;
@@ -1076,6 +1098,12 @@ main {
     width: 90%;
   }
 
+  .Month_theme .left_showbox img {
+
+    max-width: 100%;
+    height: auto;
+    margin-left: 0;
+  }
 
   .Month_theme .right_showtext .article_title {
     font-size: 2.3rem;
