@@ -947,7 +947,6 @@
 
 
   <script>
-
     //平板與手機模式閜顯示搜尋
     var search2 = $('.search2');
     search2.on('click', function () {
@@ -955,29 +954,27 @@
     });
 
     var zero = 0;
-    var overlay = $('.overlay');
     $(window).on('scroll', function (event) {
-      event.stopPropagation();
-      if ($(window).scrollTop() > 0) {
+      // event.stopPropagation();
+      if ($(window).scrollTop() > 1000) {
         $('nav').addClass('fixed');
-
       } else {
         $('nav').removeClass('fixed');
       }
       if ($(".fixed")) {
         if ($(window).scrollTop() > zero) {
-          $(".fixed").stop(true).animate({ opacity: 0 });
-          $(".fixed").css("display", "none");
-          // overlay.removeClass('visible');
 
+          $(".fixed").css("transform", "translate3d(0px,-100px,0px)");
+          $(".fixed").css("opacity", "0");
         } else {
-          $(".fixed").css("display", "flex");
-          $(".fixed").stop(true).animate({ opacity: 1 });
+          $(".fixed").css("transform", "translate3d(0,0,0)");
+          $(".fixed").css("opacity", "1");
+
+
         }
         zero = $(window).scrollTop()
       }
-    }
-    )
+    });
 
     // 漢堡紐
     var btn_switch = $('.btn_switch'),
@@ -1156,7 +1153,6 @@
 
 
     $('.js-timeline').Timeline();
-
   </script>
 
 </body>
